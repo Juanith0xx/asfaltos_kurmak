@@ -15,9 +15,9 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24">
         {/* Logo */}
-        <div className="w-42 h-auto pt-6 pb-4">
+        <div className="w-50 h-auto pt-6 pb-4">
           <img src="/Logo.png" alt="Logo S-Muebles" className="w-full h-auto" />
         </div>
 
@@ -28,7 +28,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="bg-[#f3993e] text-white px-10 py-2 rounded-lg shadow-md font-bold transform transition duration-300 hover:bg-[#d97f2d] hover:-translate-y-1"
+                className="bg-[#f3993e] text-white px-10 py-2 rounded-lg shadow-md font-bold transform transition duration-300 hover:bg-orange-500 hover:-translate-y-1"
               >
                 {link.name}
               </a>
@@ -36,7 +36,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 sm:text-base font-[Poppins] hover:text-[#f3993e] hover:text-lg transition font-medium"
+                className="text-gray-700 sm:text-xl font-[Poppins] hover:text-[#f3993e] hover:text-lg hover:font-bold transition font-medium"
               >
                 {link.name}
               </a>

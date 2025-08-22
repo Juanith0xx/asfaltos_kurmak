@@ -3,39 +3,39 @@ import React from "react";
 const servicios = [
   {
     id: 1,
-    titulo: "Servicio 1",
+    titulo: "Bacheo y reparacion de Asfalto",
     descripcion: "Descripción breve del servicio 1.",
-    imagen: "/img/servicio1.webp",
+    imagen: "/Servicios/Servicio_Bacheo_de_Asfalto_Asfalto_Kurmak.jpeg",
   },
   {
     id: 2,
-    titulo: "Servicio 2",
+    titulo: "Asfalto de Color y Abrasivo",
     descripcion: "Descripción breve del servicio 2.",
-    imagen: "/img/servicio2.webp",
+    imagen: "/Servicios/Asfalto_Color_Servicio_Asfalto_Kurmak.jpeg",
   },
   {
     id: 3,
-    titulo: "Servicio 3",
+    titulo: "Asfalto para lugares Deportivos",
     descripcion: "Descripción breve del servicio 3.",
-    imagen: "/img/servicio3.webp",
+    imagen: "/Servicios/Asfalto_Deportivo_Servicio_Asfalto_Kurmak.png",
   },
   {
     id: 4,
-    titulo: "Servicio 4",
+    titulo: "Demarcaciop de Asfalto",
     descripcion: "Descripción breve del servicio 4.",
-    imagen: "/img/servicio4.webp",
+    imagen: "/Servicios/Servicio_Demarcacion_de_Asfalto_Asfalto_Kurmak.jpeg",
   },
   {
     id: 5,
-    titulo: "Servicio 5",
+    titulo: "Sellos de Asfalto",
     descripcion: "Descripción breve del servicio 5.",
-    imagen: "/img/servicio5.webp",
+    imagen: "/Servicios/Servicio_Sello_de_Asfalto_Asfalto_Kurmak.jpeg",
   },
   {
     id: 6,
-    titulo: "Servicio 6",
+    titulo: "Fresado de Asfalto",
     descripcion: "Descripción breve del servicio 6.",
-    imagen: "/img/servicio6.webp",
+    imagen: "/Servicios/Servicio_Fresado_de_Asfalto_Asfalto_Kurmak.jpeg",
   },
 ];
 
@@ -58,7 +58,7 @@ const Servicios = () => {
               <img
                 src={servicio.imagen}
                 alt={servicio.titulo}
-                className="w-full h-40 object-cover rounded-lg mb-4"
+                className="w-full h-100 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-semibold text-gray-700">
                 {servicio.titulo}
@@ -69,7 +69,7 @@ const Servicios = () => {
         </div>
 
         {/* Botón */}
-        <div className="mt-12">
+        <div className="mt-12 flex justify-end">
           <button className="px-6 py-3 bg-orange-500 text-white rounded-xl shadow-md hover:bg-orange-600 transition">
             Cotiza con Nosotros
           </button>

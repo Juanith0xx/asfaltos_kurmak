@@ -4,6 +4,7 @@ export default {
     extend: {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'], // tu fuente Roboto
+        poppins: ['Poppins', 'sans-serif'],
       },
       keyframes: {
         fadeIn: {

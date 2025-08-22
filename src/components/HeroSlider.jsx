@@ -1,5 +1,6 @@
 // src/components/HeroSlider.jsx
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -31,22 +32,20 @@ const slides = [
 const HeroSlider = () => {
   return (
     <Swiper
-      navigation={true}               // Flechas
-      pagination={{ clickable: true }} // Puntos
-      loop={true}                      // Bucle
-      autoplay={{ delay: 500, disableOnInteraction: false }} // Movimiento automático
-      className="h-[90vh] w-full"
+      modules={[Navigation, Pagination, Autoplay]} // Activación de módulos
+      navigation={true}
+      pagination={{ clickable: true }}
+      loop={true}
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
+      className="h-[80vh] w-full"
     >
       {slides.map((slide, idx) => (
         <SwiperSlide key={idx}>
           <div
-            className="h-[90vh] w-full bg-cover bg-center flex items-center relative"
+            className="h-[80vh] w-full bg-cover bg-center flex items-center relative"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
-
-            {/* Contenido */}
             <div className="relative z-10 max-w-3xl px-6 lg:px-20 text-white">
               <h1 className="text-3xl lg:text-5xl font-extrabold mb-4">
                 {slide.title}
