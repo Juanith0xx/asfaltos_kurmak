@@ -33,7 +33,7 @@ const ContactoHome = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-[#f3993e] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#d97f2d] transition"
+              className="bg-[#f3993e] text-white px-8 py-3 rounded-lg hover:font-bold hover:bg-orange-500 transition"
             >
               Enviar Mensaje
             </button>

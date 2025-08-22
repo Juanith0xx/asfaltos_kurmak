@@ -44,7 +44,7 @@ const Servicios = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-6 text-left">
         {/* Título */}
-        <h2 className="text-4xl font-bold text-gray-800 mb-12">
+        <h2 className="text-4xl font-bold text-gray-800  underline decoration-[#F59816] mb-12">
           Nuestros Servicios
         </h2>
 
@@ -70,7 +70,7 @@ const Servicios = () => {
 
         {/* Botón */}
         <div className="mt-12 flex justify-end">
-          <button className="px-6 py-3 bg-orange-500 text-white rounded-xl shadow-md hover:bg-orange-600 transition">
+          <button className="px-6 py-3 bg-[#f3993e] text-white rounded-xl shadow-md hover:bg-orange-600 transition">
             Cotiza con Nosotros
           </button>
         </div>

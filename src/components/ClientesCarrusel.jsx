@@ -3,11 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const logos = [
-  { src: "/img/Alianzas/Logo_Hafele.png", alt: "Hafele" },
-  { src: "/img/Alianzas/Logo_Porcelanosa.png", alt: "Porcelanosa" },
-  { src: "/img/Alianzas/Logo_Abet_Laminati.png", alt: "Abet Laminati" },
-  { src: "/img/Alianzas/Logo_Robfu.png", alt: "Robfu" },
-  { src: "/img/Alianzas/Logo_merino.png", alt: "Merino" },
+  { src: "/Clientes/Burgen_King.png", alt: "Burgen_Kings" },
+  { src: "/Clientes/Municipalidad_Puente_Alto.png", alt: "Municipalidad_Puente_Alto" },
+  { src: "/Clientes/Municipalidad_Santiago.png", alt: "Municipalidad_Santiago" },
+  { src: "/Clientes/Oval.png", alt: "Constructora_Oval" },
+  { src: "/Clientes/Parque_del_Recuerdo.webp", alt: "Parque_del_Recuerdo" },
+  
+
 ];
 
 const sliderSettings = {
@@ -31,7 +33,7 @@ const sliderSettings = {
 export default function ClientCarousel() {
   return (
     <section className="py-12 bg-white">
-      <h2 className="text-center text-2xl font-semibold text-gray-800 mb-8">
+      <h2 className="text-3xl font-bold text-gray-800 mb-4 font-poppins text-center">
         Clientes que confían en nosotros
       </h2>
       <Slider {...sliderSettings}>
