@@ -70,7 +70,7 @@ const Servicios = () => {
 
         {/* Botón */}
         <div className="mt-12 flex justify-end">
-          <button className="px-6 py-3 bg-[#f3993e] text-white rounded-xl shadow-md hover:bg-orange-600 transition">
+          <button className="px-6 py-3 bg-[#f3993e] text-white rounded-xl shadow-md hover:bg-orange-600 hover:font-bold transition">
             Cotiza con Nosotros
           </button>
         </div>
