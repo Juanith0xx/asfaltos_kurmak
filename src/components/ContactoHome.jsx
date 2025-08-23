@@ -49,11 +49,11 @@ const ContactoHome = () => {
           <ul className="space-y-4 text-gray-700 font-roboto">
             <li className="flex items-center">
               <FaPhoneAlt className="text-[#f3993e] mr-3" />
-              +56 9 XXXX XXXX
+              +56 9 6918 6224
             </li>
             <li className="flex items-center">
               <FaEnvelope className="text-[#f3993e] mr-3" />
-              contacto@stafiloskurmak.cl
+              contacto@asfaltoskurmak.cl
             </li>
             <li className="flex items-center">
               <FaClock className="text-[#f3993e] mr-3" />

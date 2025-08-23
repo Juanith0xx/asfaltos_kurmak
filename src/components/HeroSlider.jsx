@@ -32,28 +32,33 @@ const slides = [
 const HeroSlider = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Autoplay]} // Activación de módulos
+      modules={[Navigation, Pagination, Autoplay]}
       navigation={true}
       pagination={{ clickable: true }}
       loop={true}
       autoplay={{ delay: 5000, disableOnInteraction: false }}
-      className="h-[80vh] w-full"
+      className="w-full"
     >
       {slides.map((slide, idx) => (
         <SwiperSlide key={idx}>
           <div
-            className="h-[80vh] w-full bg-cover bg-center flex items-center relative"
+            className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center flex items-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
+            {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
-            <div className="relative z-10 max-w-3xl px-6 lg:px-20 text-white">
-              <h1 className="text-3xl lg:text-5xl font-extrabold mb-4">
+
+            {/* Contenido */}
+            <div className="relative z-10 max-w-3xl px-4 sm:px-6 lg:px-20 text-center md:text-left text-white">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
                 {slide.title}
               </h1>
-              <p className="text-lg lg:text-xl mb-6">{slide.description}</p>
+              <p className="text-base sm:text-lg md:text-xl mb-6">
+                {slide.description}
+              </p>
               <a
                 href={slide.link}
-                className="inline-block bg-transparent border border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
+                className="inline-block bg-transparent border border-white text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
               >
                 {slide.button}
               </a>
@@ -61,6 +66,23 @@ const HeroSlider = () => {
           </div>
         </SwiperSlide>
       ))}
+
+      {/* Flechas blancas */}
+      <style>
+        {`
+          .swiper-button-next,
+          .swiper-button-prev {
+            color: #ffffff;
+          }
+          .swiper-pagination-bullet {
+            background: white;
+            opacity: 0.7;
+          }
+          .swiper-pagination-bullet-active {
+            opacity: 1;
+          }
+        `}
+      </style>
     </Swiper>
   );
 };
