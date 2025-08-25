@@ -28,7 +28,7 @@ const ContactoHome = () => {
   };
 
   return (
-    <section className="bg-white py-16 px-6 lg:px-20">
+    <section id="contactohome" className="bg-white py-16 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Formulario */}
         <div>

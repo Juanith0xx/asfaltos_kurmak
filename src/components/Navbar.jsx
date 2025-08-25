@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { FiHome, FiUsers, FiBriefcase, FiMail } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa'; // ✅ Ícono de WhatsApp
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,9 +10,23 @@ const Navbar = () => {
   const links = [
     { name: 'Inicio', href: '/', icon: <FiHome /> },
     { name: 'Nosotros', href: '/nosotros', icon: <FiUsers /> },
-    { name: 'Servicios', href: '/servicios', icon: <FiBriefcase /> },
-    { name: 'Contacto', href: '/contacto', icon: <FiMail />, isButton: true },
+    { name: 'Servicios', href: '#servicios', icon: <FiBriefcase /> },
+    { name: 'Contacto', href: '#contactohome', icon: <FiMail />, isButton: true }, // 👈 ahora apunta al id
   ];
+
+  // 👇 Función para manejar el scroll suave
+  const handleScroll = (e, href) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const yOffset = -90; // 👈 ajusta para que no quede tapado por el navbar fijo
+        const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+      setOpen(false); // cerrar el menú en móvil
+    }
+  };
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
@@ -29,6 +43,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleScroll(e, link.href)}
                 className="bg-[#f3993e] text-white px-10 py-2 rounded-lg shadow-md font-bold transform transition duration-300 hover:bg-orange-500 hover:-translate-y-1"
               >
                 {link.name}
@@ -37,6 +52,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleScroll(e, link.href)}
                 className="text-gray-700 sm:text-xl font-[Poppins] hover:text-[#f3993e] hover:text-lg hover:font-bold transition font-medium"
               >
                 {link.name}
@@ -75,8 +91,8 @@ const Navbar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
+                  onClick={(e) => handleScroll(e, link.href)}
                   className="flex items-center justify-center bg-[#F59816] text-white px-4 py-2 rounded-lg shadow-md font-bold transition hover:bg-[#e68932]"
-                  onClick={() => setOpen(false)}
                 >
                   {link.icon && <span className="mr-3">{link.icon}</span>}
                   {link.name}
@@ -86,8 +102,8 @@ const Navbar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
+                  onClick={(e) => handleScroll(e, link.href)}
                   className="flex items-center text-gray-700 hover:text-[#f3993e] font-medium"
-                  onClick={() => setOpen(false)}
                 >
                   {link.icon && <span className="mr-3">{link.icon}</span>}
                   {link.name}
@@ -99,7 +115,7 @@ const Navbar = () => {
           {/* ✅ Botón WhatsApp */}
           <li>
             <a
-              href="https://wa.me/56969186224" // Reemplaza con tu número real
+              href="https://wa.me/56969186224"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-lg shadow-md font-bold transition hover:bg-green-600"
