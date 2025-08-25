@@ -1,7 +1,8 @@
 // src/components/Navbar.jsx
 import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
-import { FiHome, FiUsers, FiBriefcase, FiMail } from 'react-icons/fi'; // Ejemplo de íconos
+import { FiHome, FiUsers, FiBriefcase, FiMail } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa'; // ✅ Ícono de WhatsApp
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -53,14 +54,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Overlay (oscurece el fondo cuando el menú está abierto) */}
-      {open && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-20 z-40"
-          onClick={() => setOpen(false)}
-        ></div>
-      )}
-
       {/* Mobile Sidebar */}
       <div
         className={`fixed top-0 left-0 h-screen w-64 bg-white shadow-lg z-50 transform transition-transform duration-800 ${
@@ -102,6 +95,20 @@ const Navbar = () => {
               </li>
             )
           )}
+
+          {/* ✅ Botón WhatsApp */}
+          <li>
+            <a
+              href="https://wa.me/56969186224" // Reemplaza con tu número real
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-lg shadow-md font-bold transition hover:bg-green-600"
+              onClick={() => setOpen(false)}
+            >
+              <FaWhatsapp className="mr-3" size={20} />
+              WhatsApp
+            </a>
+          </li>
         </ul>
       </div>
     </header>

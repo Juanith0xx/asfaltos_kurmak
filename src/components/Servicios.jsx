@@ -61,7 +61,7 @@ const Servicios = () => {
                   alt={servicio.titulo}
                   className="w-full h-48 sm:h-56 object-cover rounded-lg"
                 />
-                <div className="absolute inset-0  bg-opacity-0 group-hover:bg-opacity-20 transition rounded-lg" />
+                <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-20 transition rounded-lg" />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mt-4">
                 {servicio.titulo}
@@ -75,7 +75,7 @@ const Servicios = () => {
 
         {/* Botón */}
         <div className="mt-10 sm:mt-12 flex justify-center sm:justify-end">
-          <button className="bg-[#f3993e] text-white px-8 sm:px-10 py-2 rounded-lg shadow-md font-bold transform transition duration-300 hover:bg-orange-500 hover:-translate-y-1 hover:shadow-lg">
+          <button className="bg-[#f3993e] text-white px-8 sm:px-10 py-2 rounded-lg shadow-md !font-bold transform transition duration-300 hover:bg-orange-500 hover:-translate-y-1 hover:shadow-lg">
             Cotiza con Nosotros
           </button>
         </div>

@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Servicios from './components/Servicios';
 import Grid from './components/Grid'
 import ContactoHome from './components/ContactoHome';
+import WhatsAppBubble from './components/WhatsAppBubble';
 
 import './App.css'
 import Footer from './components/Footer';
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <WhatsAppBubble />
       <HeroSlider />
       <Home />
       <Servicios />
