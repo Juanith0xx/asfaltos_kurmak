@@ -62,7 +62,7 @@ const ContactoHome = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-[#f3993e] text-white px-8 py-3 rounded-lg hover:font-bold hover:bg-orange-500 transition"
+              className="bg-[#f3993e] text-white px-8 py-3 rounded-lg hover:!font-bold hover:bg-orange-500 transition"
             >
               Enviar Mensaje
             </button>
@@ -70,22 +70,22 @@ const ContactoHome = () => {
         </div>
 
         {/* Información de contacto */}
-        <div className="bg-gray-50 p-8 rounded-xl shadow-md">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4 font-poppins">Información de Contacto</h3>
-          <p className="text-gray-600 mb-6 font-roboto">
+        <div className="bg-[#F59816] p-8 rounded-xl shadow-md">
+          <h3 className="text-2xl font-bold text-white mb-4 font-poppins">Información de Contacto</h3>
+          <p className="text-white mb-6 font-roboto">
             Para mayor información comuníquese con nosotros por nuestros distintos canales de atención al cliente.
           </p>
-          <ul className="space-y-4 text-gray-700 font-roboto">
+          <ul className="space-y-4 text-white font-roboto">
             <li className="flex items-center">
-              <FaPhoneAlt className="text-[#f3993e] mr-3" />
+              <FaPhoneAlt className="text-white mr-3" />
               +56 9 6918 6224
             </li>
             <li className="flex items-center">
-              <FaEnvelope className="text-[#f3993e] mr-3" />
+              <FaEnvelope className="text-white mr-3" />
               contacto@asfaltoskurmak.cl
             </li>
             <li className="flex items-center">
-              <FaClock className="text-[#f3993e] mr-3" />
+              <FaClock className="text-white mr-3" />
               Lunes a Viernes de 09:00 a 18:00
             </li>
           </ul>

@@ -49,3 +49,67 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1.2s ease-out forwards;
+}
+
+
+.card-hover-wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover-wave::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #F59816; /* azul Tailwind: blue-600 */
+  z-index: 0;
+  transition: height 0.5s ease;
+}
+
+.card-hover-wave:hover::before {
+  height: 100%;
+}
+
+.card-hover-wave > * {
+  position: relative;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.card-hover-wave:hover h3,
+.card-hover-wave:hover p,
+.card-hover-wave:hover svg {
+  color: white;
+}
+
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}

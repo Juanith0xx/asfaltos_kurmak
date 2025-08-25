@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24">
         {/* Logo */}
         <div className="w-50 h-auto pt-6 pb-4">
-          <img src="/Logo.png" alt="Logo S-Muebles" className="w-full h-auto" />
+          <img src="/Logo.png" alt="Logo Asfaltos_Kurmak" className="w-full h-auto" />
         </div>
 
         {/* Desktop Links */}
