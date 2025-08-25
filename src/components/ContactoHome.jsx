@@ -1,6 +1,32 @@
 import { FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 
 const ContactoHome = () => {
+  // función para manejar el submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      nombre: e.target[0].value,
+      correo: e.target[1].value,
+      telefono: e.target[2].value,
+      mensaje: e.target[3].value,
+    };
+
+    try {
+      const res = await fetch("https://asfaltoskurmak.cl/sendmail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      alert(data.message);
+      e.target.reset(); // limpiar formulario después de enviar
+    } catch (error) {
+      alert("Error al enviar el mensaje.");
+    }
+  };
+
   return (
     <section className="bg-white py-16 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -10,16 +36,18 @@ const ContactoHome = () => {
           <p className="text-gray-600 mb-8 font-roboto">
             Envíanos un correo y te responderemos a la brevedad
           </p>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Nombres"
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#f3993e]"
+              required
             />
             <input
               type="email"
               placeholder="Correo Electrónico"
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#f3993e]"
+              required
             />
             <input
               type="tel"
@@ -30,6 +58,7 @@ const ContactoHome = () => {
               rows="5"
               placeholder="Mensaje"
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#f3993e]"
+              required
             ></textarea>
             <button
               type="submit"
