@@ -5,21 +5,21 @@ import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
   {
-    image: "/Slider/slider1.jpg",
+    image: "/Slider/slider1.webp",
     title: "Pavimentos garantizados contra el levantamiento y desgaste por 3 años.",
     description: "Realizamos un análisis del problema por parte del equipo técnico comercial de Asfaltos Kurmak.",
     button: "NUESTROS SERVICIOS",
     link: "/servicios",
   },
   {
-    image: "/Slider/slider4.jpg",
+    image: "/Slider/slider4.webp",
     title: "Asesoría técnica especializada para proyectos de alto estándar.",
     description: "Soluciones adaptadas a tus necesidades con soporte integral.",
     button: "CONTÁCTANOS",
     link: "/contacto",
   },
   {
-    image: "/Slider/slider3.jpg",
+    image: "/Slider/slider3.webp",
     title: "Calidad y compromiso en cada proyecto de pavimentación.",
     description: "Más de 10 años entregando resultados garantizados.",
     button: "VER PROYECTOS",
@@ -48,7 +48,7 @@ const HeroSlider = () => {
         {slides.map((slide, idx) => (
           <div key={idx} className="relative w-full">
             <div
-              className="relative flex items-center justify-left w-full h-[75vh] sm:h-[70vh] md:h-[65vh] lg:h-[75vh]"
+              className="relative flex items-center justify-left w-full h-[75vh] sm:h-[70vh] md:h-[65vh] lg:h-[75vh] mt-10"
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: "cover",

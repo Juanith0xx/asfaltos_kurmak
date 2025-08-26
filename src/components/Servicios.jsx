@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const servicios = [
   {
@@ -75,9 +76,12 @@ const Servicios = () => {
 
         {/* Botón */}
         <div className="mt-10 sm:mt-12 flex justify-center sm:justify-end">
-          <button className="bg-[#f3993e] text-white px-8 sm:px-10 py-2 rounded-lg shadow-md !font-bold transform transition duration-300 hover:bg-orange-500 hover:-translate-y-1 hover:shadow-lg">
-            Cotiza con Nosotros
-          </button>
+          <Link
+  to="/contacto"
+  className="bg-[#f3993e] text-white px-8 sm:px-10 py-2 rounded-lg shadow-md !font-bold transform transition duration-300 hover:bg-orange-500 hover:-translate-y-1 hover:shadow-lg text-center"
+>
+  Cotiza con Nosotros
+</Link>
         </div>
       </div>
     </section>

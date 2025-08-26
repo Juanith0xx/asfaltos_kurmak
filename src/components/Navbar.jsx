@@ -1,7 +1,8 @@
 // src/components/Navbar.jsx
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
-import { FiHome, FiUsers, FiBriefcase, FiMail } from 'react-icons/fi';
+import { FiHome, FiUsers, FiBriefcase, FiMail, FiFolder } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -9,9 +10,11 @@ const Navbar = () => {
 
   const links = [
     { name: 'Inicio', href: '/', icon: <FiHome /> },
-    { name: 'Nosotros', href: '/nosotros', icon: <FiUsers /> },
+    { name: 'Nosotros', href: '#Nosotros', icon: <FiUsers /> },
     { name: 'Servicios', href: '#servicios', icon: <FiBriefcase /> },
-    { name: 'Contacto', href: '#contactohome', icon: <FiMail />, isButton: true }, // 👈 ahora apunta al id
+    { name: 'Proyectos', href: '/proyectos', icon: <FiFolder /> },
+    { name: 'Contacto', href: '/contacto', icon: <FiMail />, isButton: true },
+    
   ];
 
   // 👇 Función para manejar el scroll suave
@@ -31,9 +34,11 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24">
-        {/* Logo */}
+         {/* Logo */}
         <div className="w-50 h-auto pt-6 pb-4">
-          <img src="/Logo.png" alt="Logo Asfaltos_Kurmak" className="w-full h-auto" />
+          <Link to="/">
+            <img src="/Logo.png" alt="Logo Asfaltos Kurmak" className="w-full h-auto" />
+          </Link>
         </div>
 
         {/* Desktop Links */}

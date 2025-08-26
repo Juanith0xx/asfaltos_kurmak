@@ -78,7 +78,7 @@ const Home = () => {
         <link rel="canonical" href="https://asfaltoskurmak.cl" />
       </Helmet>
 
-      <section className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 py-12 bg-gray-50">
+      <section id="Nosotros" className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 py-12 bg-gray-50">
         {/* Slider de imágenes */}
         <div className="w-full lg:w-1/2 flex justify-center items-start">
           <div className="w-full max-w-xl">
