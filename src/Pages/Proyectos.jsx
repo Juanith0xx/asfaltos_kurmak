@@ -14,23 +14,33 @@ const secciones = [
     titulo: "Proyecto Bodagas San Francisco",
     descripcion: `Proyecto de Asfaltos Kurmak para Bodegas San Francisco: pavimentación de 10.000 m² con asfalto de alta calidad y aplicación de sello protector, garantizando durabilidad, seguridad y resistencia al desgaste en superficies industriales y comerciales.`,
      imagenes: [
-      { src: "/Proyectos/Bodegas/Inicio_asfaltos_Kurmak.webp", descripcion: "" },
-      { src: "/Proyectos/Bodegas/Maestro_rastrillando_Asfaltos_Kurmak.webp", descripcion: "" },
-      { src: "/Proyectos/Bodegas/Carga_maquina_finicher_Asfaltos_Kurmak.webp", descripcion: "" },
-      { src: "/Proyectos/Bodegas/Proceso_rodillado_Asfaltos_Kurmak.webp", descripcion: "" }, 
-      { src: "/Proyectos/Bodegas/Maestro_restificando_Asfaltos_Kurmak.webp", descripcion: "" },      
+      { src: "/Bodegas/Inicio_asfaltos_Kurmak.webp", descripcion: "" },
+      { src: "/Bodegas/Maestro_rastrillando_Asfaltos_Kurmak.webp", descripcion: "" },
+      { src: "/Bodegas/Carga_maquina_finicher_Asfaltos_Kurmak.webp", descripcion: "" },
+      { src: "/Bodegas/Proceso_rodillado_Asfaltos_Kurmak.webp", descripcion: "" }, 
+      { src: "/Bodegas/Maestro_restificando_Asfaltos_Kurmak.webp", descripcion: "" },      
      ], 
   },
   {
     titulo: "Proyecto Multicanchas Municipalidad de La Florida",
     descripcion: `Proyecto de Asfaltos Kurmak para la Municipalidad de La Florida: pavimentación y acondicionamiento de multicanchas con asfaltos de alta calidad, garantizando durabilidad, seguridad y superficies óptimas para actividades deportivas.`,
     imagenes: [
-      { src: "/Proyectos/Multicancha/Inicio_de Sello.webp", descripcion: "" },
-      { src: "/Proyectos/Multicancha/Sello_Terminado.webp", descripcion: "" },
-      { src: "/Proyectos/Multicancha/Preparacion_para_pintura.webp", descripcion: "" },
-      { src: "/Proyectos/Multicancha/Inicio_de_pintado.webp", descripcion: "" },
-      { src: "/Proyectos/Multicancha/Termino_de_pintado.webp", descripcion: "" },
-      { src: "/Proyectos/Multicancha/Demarcacion_de_cancha_deportiva.webp", descripcion: "" },
+      { src: "/Multicancha/Inicio_de_Sello.webp", descripcion: "" },
+      { src: "/Multicancha/Sello_Terminado.webp", descripcion: "" },
+      { src: "/Multicancha/Preparacion_para_pintura.webp", descripcion: "" },
+      { src: "/Multicancha/Inicio_de_pintado.webp", descripcion: "" },
+      { src: "/Multicancha/Termino_de_pintado.webp", descripcion: "" },
+      { src: "/Multicancha/Demarcacion_de_cancha_deportiva.webp", descripcion: "" },
+    ],
+  },
+  {
+    titulo: "Proyecto Pista de Karting Pirque",
+    descripcion: `Proyecto de Asfaltos Kurmak en Pirque: construcción y pavimentación de pista de karting con asfaltos de alta resistencia, garantizando seguridad, durabilidad y un óptimo desempeño para actividades deportivas y recreativas.`,
+    imagenes: [
+      { src: "/Karting/Karting1.webp", descripcion: "" },
+      { src: "/Karting/Karting2.webp", descripcion: "" },
+      { src: "Karting/Karting3.webp", descripcion: "" },
+      { src: "Karting/Karting4.webp", descripcion: "" },
     ],
   },
 
@@ -248,7 +258,7 @@ const Proyectos = () => {
           Cuéntanos tus requerimientos y recibe una propuesta personalizada sin costo.
         </p>
         <a
-          href="/contacto/contact"
+          href="/contacto"
           className="inline-block bg-[#F59816] text-white font-semibold px-6 py-3 rounded-full  transition-colors hover:-translate-y-1 hover:bg-orange-500 hover:!font-bolt"
         >
           Solicitar Cotización

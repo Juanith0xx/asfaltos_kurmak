@@ -9,7 +9,7 @@ const slides = [
     title: "Pavimentos garantizados contra el levantamiento y desgaste por 3 años.",
     description: "Realizamos un análisis del problema por parte del equipo técnico comercial de Asfaltos Kurmak.",
     button: "NUESTROS SERVICIOS",
-    link: "/servicios",
+    link: "#servicios",
   },
   {
     image: "/Slider/slider4.webp",
@@ -42,6 +42,19 @@ const HeroSlider = () => {
     arrows: true,
   };
 
+  // 🔥 Scroll suave si el link es un anchor (#id)
+  const handleScroll = (e, href) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const yOffset = -90; // ajusta según tu navbar
+        const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <>
       <Slider {...settings}>
@@ -67,6 +80,7 @@ const HeroSlider = () => {
                   </p>
                   <a
                     href={slide.link}
+                    onClick={(e) => handleScroll(e, slide.link)}
                     className="inline-block bg-transparent border border-white text-white text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3 rounded-full font-semibold hover:bg-white hover:text-black transition animate-slide-in-left animate-delay-600"
                   >
                     {slide.button}
